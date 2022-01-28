@@ -1,7 +1,7 @@
 import { navigate } from '@reach/router';
-import axios from 'axios';
+
 import React, { useContext, useState } from 'react';
-import { useEffect } from 'react/cjs/react.production.min';
+
 import { UserContext } from '../UserContext';
 
 export default function VotingSite() {
@@ -16,7 +16,7 @@ export default function VotingSite() {
   return (
       <>
 
-      <h1>logged in as {user.name}</h1>
+      <h1>logged in as {user}</h1>
       
       </>
   )
