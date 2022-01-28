@@ -1,0 +1,806 @@
+[
+  {
+    "name": "Al Sebai, Lubna Iyad",
+    "id": 329683,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Al-Humaid, Fatima Ali Moosa",
+    "id": 316504,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Alnajjar, Haya",
+    "id": 314907,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Alnajjar, Mouna",
+    "id": 323272,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Amin, Farzana",
+    "id": 319041,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Angelloz, Jasmine Karch",
+    "id": 313951,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Avci, Loreen",
+    "id": 336138,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Bidstrup, Nikolas Theo",
+    "id": 338129,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Bohác, Sophia Torrichelli",
+    "id": 315511,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Børgesen, Emma Dia Westergaard",
+    "id": 308934,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Brøgger, Amalie Brünning",
+    "id": 329443,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Egholm, Kiara Sirri Che",
+    "id": 303133,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Ellefsen, Røskva",
+    "id": 301310,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Hansen, Kevin Arne",
+    "id": 157118,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Hansen, Mathilda Sofie",
+    "id": 322838,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Jervild, Frida Klein",
+    "id": 234506,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Lessel, Anita",
+    "id": 240528,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Low, Mette",
+    "id": 323560,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Olsen, Cathrine Diness",
+    "id": 336164,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Schou, Amanda Borup Kolding",
+    "id": 324042,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Simonsen, Oscar Østgård",
+    "id": 319607,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Sørensen, Camilla Røjgaard",
+    "id": 309486,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Tandogan, Envar Martin",
+    "id": 331488,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Vitoft, Mathias Engedal",
+    "id": 291072,
+    "afdeling": 310,
+    "leader": false
+  },
+  {
+    "name": "Al-Samarraie, Fahed",
+    "id": 334881,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Andersen, Alfred",
+    "id": 336511,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Astafanos, Jasmin Nabil",
+    "id": 308470,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Aydin, Yagiz Hamza",
+    "id": 335483,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Aziz Khan, Zoha",
+    "id": 311314,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Borchert, Alexander Sterling",
+    "id": 334947,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Brix, Thobias Asger",
+    "id": 338529,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Camur, Melissa",
+    "id": 270157,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Christensen, Cecilie Stenholt",
+    "id": 212718,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Coban, Lukas Efe",
+    "id": 332569,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Dahl, Silja Hertzman",
+    "id": 309489,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Dons, Jakob Andreas",
+    "id": 337890,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Fuglsang, Sofie Flyttov",
+    "id": 339654,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Hansen, Maj-Britt Legaard Elmkær",
+    "id": 279613,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Jacobsen, Sasha Øland",
+    "id": 217955,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Jensen, Kristian Ravn",
+    "id": 244459,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Jensen, Sofie Ravn",
+    "id": 311467,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Jensen, Victoria Humlebæk",
+    "id": 244069,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Jepsen, Erica Meiner Ravn",
+    "id": 292430,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Jervild, Emilie",
+    "id": 210916,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Jervild, Wilma Klein",
+    "id": 233960,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Jønsson, Nikolas Miguel",
+    "id": 256278,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Karaman, Sahin",
+    "id": 267225,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Karatas, Alara-Melis",
+    "id": 263150,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Karatas, Asu",
+    "id": 257253,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Ketkesorn, Julie Panyakum",
+    "id": 256653,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Kristensen, Emilie Brygmann",
+    "id": 338046,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Kristensen, Rasmus",
+    "id": 259138,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Larsen, Maja Kemp",
+    "id": 323818,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Ljungstrøm, Malene",
+    "id": 154646,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Lorenzen, Johnnie Eva Nørgaard",
+    "id": 238790,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Madsen, Michelle Jeannie",
+    "id": 334271,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Mirlashari, Sama",
+    "id": 314594,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Møller, Marcus Riel",
+    "id": 306625,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Møllnitz, Nicolai Jess",
+    "id": 252450,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Nielsen, Christian Loui Elsang",
+    "id": 286828,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Olsen, Stine Pernille",
+    "id": 309863,
+    "afdeling": 602,
+    "leader": true
+  },
+  {
+    "name": "Overbye, Kristoffer Stubkjær",
+    "id": 338099,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Öztürk, Irem",
+    "id": 284453,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Pedersen, Andreas",
+    "id": 223904,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Pedersen, Ann-Sofie Flora Nissen",
+    "id": 309491,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Rasch, Lasse",
+    "id": 340579,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Sandte, Paul Georg",
+    "id": 336356,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Seker, Meryem",
+    "id": 337140,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Sørensen, Caroline Møller",
+    "id": 267293,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Sørensen, Mette Lauge",
+    "id": 212037,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Stangerup, Marius",
+    "id": 308044,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Tancuay, Benyamin Andersen",
+    "id": 244456,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Tangaloglu, Mihriban",
+    "id": 260775,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Vangsgaard, Mathias Højstrup",
+    "id": 221083,
+    "afdeling": 602,
+    "leader": false
+  },
+  {
+    "name": "Erman, Eyüp Deniz",
+    "id": 326853,
+    "afdeling": 604,
+    "leader": false
+  },
+  {
+    "name": "Kütük, Furkan",
+    "id": 319860,
+    "afdeling": 604,
+    "leader": false
+  },
+  {
+    "name": "Larsen Che, Chi",
+    "id": 330141,
+    "afdeling": 604,
+    "leader": false
+  },
+  {
+    "name": "Qasiin, Hamsa Jibriil Mohamed",
+    "id": 326964,
+    "afdeling": 604,
+    "leader": false
+  },
+  {
+    "name": "Trolle-Hemmingsen, Viktor",
+    "id": 332376,
+    "afdeling": 604,
+    "leader": false
+  },
+  {
+    "name": "Walas, Noah Matthæus",
+    "id": 332804,
+    "afdeling": 604,
+    "leader": false
+  },
+  {
+    "name": "Ansar, Muhammad Isa",
+    "id": 339402,
+    "afdeling": 605,
+    "leader": false
+  },
+  {
+    "name": "Bolmgren, Stine",
+    "id": 217197,
+    "afdeling": 605,
+    "leader": false
+  },
+  {
+    "name": "Ciftci, Elif",
+    "id": 325660,
+    "afdeling": 605,
+    "leader": false
+  },
+  {
+    "name": "Halskov, Marie Leturgie",
+    "id": 334173,
+    "afdeling": 605,
+    "leader": false
+  },
+  {
+    "name": "Hemmingsen, Emma Klifforth",
+    "id": 338888,
+    "afdeling": 605,
+    "leader": false
+  },
+  {
+    "name": "Koc, Yasmin Aysel",
+    "id": 259696,
+    "afdeling": 605,
+    "leader": false
+  },
+  {
+    "name": "Kröll, Nikoline Eva Kristine",
+    "id": 338246,
+    "afdeling": 605,
+    "leader": false
+  },
+  {
+    "name": "Nielsen, Thea Josefine Krooelt",
+    "id": 318993,
+    "afdeling": 605,
+    "leader": false
+  },
+  {
+    "name": "Ahlberg, Andreas",
+    "id": 221164,
+    "afdeling": 608,
+    "leader": false
+  },
+  {
+    "name": "Bested, Maja Müller",
+    "id": 124545,
+    "afdeling": 310,
+    "leader": true
+  },
+  {
+    "name": "Bratved, Kristian",
+    "id": 110118,
+    "afdeling": 30,
+    "leader": true
+  },
+  {
+    "name": "Knudsen, Søren",
+    "id": 129841,
+    "afdeling": 100,
+    "leader": true
+  },
+  {
+    "name": "Wiben, Patrick",
+    "id": 125811,
+    "afdeling": 602,
+    "leader": true
+  },
+  {
+    "name": "Andersen, Marcus Kjærgaard",
+    "id": 314481,
+    "afdeling": 30,
+    "leader": false
+  },
+  {
+    "name": "Fremming, Johnny",
+    "id": 124601,
+    "afdeling": 30,
+    "leader": false
+  },
+  {
+    "name": "Holst, Christian Ray",
+    "id": 145449,
+    "afdeling": 30,
+    "leader": true
+  },
+  {
+    "name": "Jakobsen, Nanna Fagerberg",
+    "id": 150716,
+    "afdeling": 30,
+    "leader": true
+  },
+  {
+    "name": "Madsen, John Paul",
+    "id": 340156,
+    "afdeling": 30,
+    "leader": false
+  },
+  {
+    "name": "Munthe, Lac",
+    "id": 124581,
+    "afdeling": 30,
+    "leader": false
+  },
+  {
+    "name": "Petersen, Louise",
+    "id": 124509,
+    "afdeling": 30,
+    "leader": false
+  },
+  {
+    "name": "Ameri, Rami",
+    "id": 327100,
+    "afdeling": 40,
+    "leader": false
+  },
+  {
+    "name": "El-Ghadouani, Nabila",
+    "id": 318230,
+    "afdeling": 40,
+    "leader": false
+  },
+  {
+    "name": "Hansen, Niclas Langhoff Nordstrøm",
+    "id": 330392,
+    "afdeling": 40,
+    "leader": false
+  },
+  {
+    "name": "Kücükavci, Yunus Emre",
+    "id": 317070,
+    "afdeling": 40,
+    "leader": false
+  },
+  {
+    "name": "Magnussen, Dennis Plougmann",
+    "id": 151238,
+    "afdeling": 40,
+    "leader": true
+  },
+  {
+    "name": "Nielsen, Nikolaj Søgaard",
+    "id": 340189,
+    "afdeling": 40,
+    "leader": false
+  },
+  {
+    "name": "Olsson, Liv",
+    "id": 319371,
+    "afdeling": 40,
+    "leader": false
+  },
+  {
+    "name": "Siewierkiewicz, Kasper",
+    "id": 250918,
+    "afdeling": 40,
+    "leader": false
+  },
+  {
+    "name": "Søder, Victor Flemming Nandwa",
+    "id": 340248,
+    "afdeling": 40,
+    "leader": false
+  },
+  {
+    "name": "Amedovska, Anastacia",
+    "id": 320559,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Amet, Melina",
+    "id": 320531,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Arshad, Abdul Ahad Usman",
+    "id": 330708,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Aslani, Anesa",
+    "id": 334859,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Barakji, Rana Sobhi",
+    "id": 243402,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Bisserup, Danni",
+    "id": 124501,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Bujupaj, Shkëlqim",
+    "id": 196145,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Christensen, Mathias Vedsø",
+    "id": 234522,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "El-Hussein, Batool",
+    "id": 339870,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "El-Hussein, Salma",
+    "id": 339784,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Elgaard, Magnus Gjesing",
+    "id": 290357,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Hansen, Mathias",
+    "id": 127326,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Holcchakier, Mark Mandrup",
+    "id": 129521,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Jacobsen, Theis Øland",
+    "id": 271775,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Jakobsen, Josefine",
+    "id": 175214,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Kücükavci, Merve",
+    "id": 296049,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Larsen, Laura Ahlehuus",
+    "id": 303525,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Low, Miguel",
+    "id": 331286,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Lukassen, Kim",
+    "id": 121455,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Mirlashari, Arian",
+    "id": 340168,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Moisen, Thomas Sebastian Lildal",
+    "id": 316984,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Muslija, Granit",
+    "id": 105138,
+    "afdeling": 80,
+    "leader": true
+  },
+  {
+    "name": "Nielsen, Dorthe",
+    "id": 124552,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Önder, Kenan",
+    "id": 214404,
+    "afdeling": 80,
+    "leader": false
+  },
+  {
+    "name": "Persson, Jonas Oliver",
+    "id": 267022,
+    "afdeling": 80,
+    "leader": false
+  }
+]

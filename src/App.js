@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { Router } from '@reach/router';
+import { useState } from 'react';
+import { UserContext } from './UserContext';
 import './App.css';
+import Startside from './pages/Startside';
+import VotingSite from './pages/VotingSite';
 
 function App() {
+  const [user, setUser] = useState(null)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        > 
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <UserContext.Provider value={{ user, setUser }}>
+
+      <Router className="App">
+        <Startside path="/" />
+        <VotingSite path="/votingsite" />
+
+      </Router>
+    </UserContext.Provider>
   );
 }
 
