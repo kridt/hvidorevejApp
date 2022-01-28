@@ -5,18 +5,24 @@ import React, { useContext, useState } from 'react';
 import { UserContext } from '../UserContext';
 
 export default function VotingSite() {
-    const { user } = useContext(UserContext)
+    const { user, setUser } = useContext(UserContext)
+    const [wellcome, setWellcome] = useState("Hej!")
+
     
-    console.log(user);
+
+
 
     if(user === null) {
         navigate("/")
-        alert("Der skete en fejl, log venligst ind igen")
+        location.reload();
     }
+    
+    
+    console.log(user);
   return (
       <>
 
-      <h1>logged in as {user}</h1>
+      <h1>{wellcome} {user.name}</h1>
       
       </>
   )

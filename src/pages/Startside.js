@@ -5,7 +5,7 @@ import { UserContext } from '../UserContext';
 
 export default function Startside() {
     const { user, setUser } = useContext(UserContext)
-    const [medarbejdere, setMedarbejdere] = useState({})
+    const [medarbejdere, setMedarbejdere] = useState({number: 0})
 
 
     useEffect(() => {
@@ -21,13 +21,12 @@ export default function Startside() {
     
 
    function login() {
-        const userLogIn = document.getElementById('id').value;
-
-        const user = medarbejdere?.filter(userid => userid.id === parseInt(userLogIn)).map(currentUser => console.log(currentUser)) 
-
-
+       const userLogIn = document.getElementById('id').value;
+       
+    
+        medarbejdere?.filter(userid => userid.id === parseInt(userLogIn)).map(currentUser => setUser(currentUser)) 
         
-        setUser(user);
+        
         navigate("/votingsite")
    }
 
