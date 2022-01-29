@@ -9,7 +9,7 @@ export default function VotingSite() {
     const { user, setUser } = useContext(UserContext)
     const [wellcome, setWellcome] = useState("Hej!")
     const [medarbejdere, setMedarbejdere] = useState([])
-    const [voterble, setVoterble] = useState({});
+    const [voterble, setVoterble] = useState([]);
 
     if(user === null) {
         navigate("/")
