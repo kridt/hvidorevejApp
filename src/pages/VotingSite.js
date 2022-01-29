@@ -22,33 +22,31 @@ export default function VotingSite() {
     const firstPartOfName = splitName[1];
     const firstName = firstPartOfName.split(" ")[1]
 
-
+    
     useEffect(()=> {
-
+        
         axios.get('/medarbejdere.json')
         .then(response => setMedarbejdere(response.data))
     }, [])
-
+    
     useEffect(()=> {
-
+        
         setVoterble(medarbejdere.filter((e)=> e.leader === false))
-
-    }, [medarbejdere]); 
+        
+    }, [medarbejdere, setMedarbejdere]); 
     
-/* console.log(medarbejder); */
-
-
+    /* console.log(medarbejder); */
     
-
-
-    console.log(voterble);
- 
- 
+    
+    
+    
+    
+    
     
     
     /* console.log(user); */
-  return (
-      <>
+    return (
+        <>
 
       <h1>{wellcome} {firstName}</h1>
 
@@ -58,6 +56,8 @@ export default function VotingSite() {
         <br />
 
 		<datalist id="vote-datalist">
+        
+        
             {voterble?.map((coworkers)=>{
                 const fullName = coworkers?.name;
                 const splitName = fullName.split(',')
