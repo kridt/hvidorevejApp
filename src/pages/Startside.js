@@ -5,8 +5,7 @@ import { UserContext } from '../UserContext';
 
 export default function Startside() {
     const { user, setUser } = useContext(UserContext)
-    const [medarbejdere, setMedarbejdere] = useState({number: 0})
-
+    const [medarbejdere, setMedarbejdere] = useState({})
 
     useEffect(() => {
 
