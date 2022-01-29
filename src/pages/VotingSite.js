@@ -33,7 +33,7 @@ export default function VotingSite() {
 
         setVoterble(medarbejdere.filter((e)=> e.leader === false))
 
-    }, []);
+    }, [medarbejdere]); 
     
 /* console.log(medarbejder); */
 
