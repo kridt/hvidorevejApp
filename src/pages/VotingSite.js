@@ -31,7 +31,7 @@ export default function VotingSite() {
 
     useEffect(()=> {
 
-        setVoterble(medarbejdere?.filter((e)=> e.leader === false))
+        setVoterble(medarbejdere.filter((e)=> e.leader === false))
 
     }, []);
     
@@ -66,7 +66,7 @@ export default function VotingSite() {
                 const firstName = firstPartOfName.split(" ")[1];
 
                 return(
-                    <option value={firstPartOfName + " " + lastName}>{ " " }</option>
+                    <option key={coworkers.id} value={firstPartOfName + " " + lastName}>{ " " }</option>
                 )
 
             })} 
