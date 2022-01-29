@@ -4,6 +4,7 @@ import { UserContext } from './UserContext';
 import './App.css';
 import Startside from './pages/Startside';
 import VotingSite from './pages/VotingSite';
+import Thanks from './pages/Thanks';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -16,7 +17,7 @@ function App() {
       <Router className="App">
         <Startside path="/" />
         <VotingSite path="/votingsite" />
-
+        <Thanks path="/thanks" />
       </Router>
     </UserContext.Provider>
   );

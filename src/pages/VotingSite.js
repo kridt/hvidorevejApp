@@ -42,7 +42,10 @@ export default function VotingSite() {
     
     
     
-    
+    function vote(e) {
+
+        navigate("/thanks")
+    }
     
     /* console.log(user); */
     return (
@@ -50,7 +53,7 @@ export default function VotingSite() {
 
       <h1>{wellcome} {firstName}</h1>
 
-      <form className="voteForm" >
+      <form>
 		<input list="vote-datalist" id="vote" name="vote" placeholder="Søg efter medarbejder" />
         <br />
         <br />
@@ -82,7 +85,7 @@ export default function VotingSite() {
 		<br />
 
 
-		<input type="submit" value="Stem!" />
+		<button onClick={()=>vote()}>Stem!</button>
 	</form>
       
       </>
