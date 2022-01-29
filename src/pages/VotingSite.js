@@ -8,12 +8,13 @@ export default function VotingSite() {
     const { user, setUser } = useContext(UserContext)
     const [wellcome, setWellcome] = useState("Hej!")
 
-    
+
 
 
 
     if(user === null) {
         navigate("/")
+        // eslint-disable-next-line
         location.reload();
     }
     
