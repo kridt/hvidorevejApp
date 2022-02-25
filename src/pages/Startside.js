@@ -16,10 +16,30 @@ export default function Startside() {
 
     }, [setMedarbejdere])
     
-    /* console.log(medarbejdere); */
     
 
-   function login() {
+    useEffect(() => {
+
+        axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
+        .then(response => response.data)
+        .then((response) => console.log(response))
+    })
+
+    function login() {
+        const inputValue =document.getElementById("id");
+        if(inputValue.value.length != 6 ) {
+            alert("Du skal skrive dit lønnummer")
+            return;
+        } 
+        medarbejdere?.filter(user => console.log(user.id === 286828))
+        /* 
+        const findTheUser = 
+        console.log(findTheUser); */
+        /* if(findTheUser === undefined) {
+            alert("Du skal skrive dit lønnummer")
+            return;
+        } */
+
        const userLogIn = document.getElementById('id').value;
        
     
