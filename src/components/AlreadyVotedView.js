@@ -1,3 +1,4 @@
+import { navigate } from '@reach/router';
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../UserContext'
@@ -11,19 +12,41 @@ export default function AlreadyVotedView() {
 
         axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
         .then(response => {
+            const currentVote = response?.data.find(vote => vote.voter == user.id)
 
+            setVotedFor(currentVote)
 
-
-            console.log(response.data);
-
-        })
+        }) 
         
         
     }, [setVotedFor])
 
+
+    function deleteMyVote(vote){
+      vote.preventDefault()
+
+      axios.delete(`https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes/${votedFor._id}`)
+
+      navigate("/voteDeleted")
+
+    }
+
+
   return (
     <>
-    <h1>Du har allerede stemt, vil du slette din stemme</h1>
+    <h1>Du har allerede stemt</h1>
+    <h2>Din nuværende stemme:</h2>
+    <h3>{votedFor?.vote}</h3>
+    <h3>{votedFor?.message}</h3>
+    <br />
+    <br />
+    <br />
+    <form onSubmit={(vote) => deleteMyVote(vote)}>
+      <label>Vil du slette din stemme?</label>
+      <br />
+      <br />
+      <input type="submit" value="Slet"/>
+    </form>
     </>
   )
 }

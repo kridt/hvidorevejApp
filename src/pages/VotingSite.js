@@ -48,32 +48,32 @@ export default function VotingSite() {
         axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
         .then(response => response.data)
         .then((response) => {
-            const votedList = response.map(e => e.voter)
+            const votedList = response.find(e => e.voter == user.id)
 
-            if (user.id == parseInt(votedList)) {
+            if (votedList != undefined) {
                 setAlreadyVoted(true);
                 console.log("alreadyVoted");
             } else {
                 setAlreadyVoted(false); 
                 console.log("Newvie here");
-            } 
+            }  
 
- 
+ console.log(votedList);
 
         } )
          
     }, [setAlreadyVoted])
      
-console.log(alreadyVoted);
+
     
-    function deleteVote(voteId) {
+    /* function deleteVote(voteId) {
         voteId.preventDefault()
 
         console.log(voteId.target.voteId.value);
 
         axios.delete(`https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes/${voteId.target.voteId.value}`)
 
-    }
+    } */
 
     
     function vote(e) {
@@ -149,11 +149,11 @@ console.log(alreadyVoted);
 		<input type="submit" value="Stem!" />
 	</form>
       
-      <h1>Delete</h1>
+      {/* <h1>Delete</h1>
       <form onSubmit={(voteId) => deleteVote(voteId)}>
         <input name="voteId" type="text" id="voteId"/>
         <input type="submit" value="Slet" />
-      </form>
+      </form> */}
 
 </>
 )}
