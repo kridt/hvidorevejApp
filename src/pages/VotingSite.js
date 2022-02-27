@@ -53,11 +53,11 @@ export default function VotingSite() {
                 setAlreadyVoted(false); 
             }  
 
- console.log(votedList);
+ console.log(user);
 
         } )
          
-    }, [setAlreadyVoted, user])
+    }, [setAlreadyVoted, user.id])
      
 
     
