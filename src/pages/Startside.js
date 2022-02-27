@@ -18,12 +18,8 @@ export default function Startside() {
     
     
 
-    useEffect(() => {
+      
 
-        axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
-        .then(response => response.data)
-        .then((response) => console.log(response))
-    })
 
     function login() {
         const inputValue =document.getElementById("id");
@@ -31,7 +27,7 @@ export default function Startside() {
             alert("Du skal skrive dit lønnummer")
             return;
         } 
-        medarbejdere?.filter(user => console.log(user.id === 286828))
+        /* medarbejdere?.filter(user => console.log(user.id === 286828)) */
         /* 
         const findTheUser = 
         console.log(findTheUser); */

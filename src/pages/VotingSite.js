@@ -10,6 +10,8 @@ export default function VotingSite() {
     const [wellcome, setWellcome] = useState("Hej!")
     const [medarbejdere, setMedarbejdere] = useState([])
     const [voterble, setVoterble] = useState([]);
+    
+    const [alreadyVoted, setAlreadyVoted] = useState([])
 
     if(user === null) {
         navigate("/")
@@ -39,7 +41,22 @@ export default function VotingSite() {
     
     
     
-    
+    useEffect(() => {
+
+        axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
+        .then(response => response.data)
+        .then((response) => {
+            const votedList = response.map(e => e.voter)
+
+            console.log(votedList); 
+
+            setAlreadyVoted(response)
+
+        } )
+         
+    }, [setAlreadyVoted])
+     
+
     
     
     function vote(e) {
