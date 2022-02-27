@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../UserContext'
 
 export default function AlreadyVotedView() {
-    const { user } = useContext(UserContext) 
+    const { user, setUser } = useContext(UserContext) 
     const [ votedFor, setVotedFor ] = useState({})
     
 
