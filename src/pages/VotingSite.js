@@ -1,5 +1,4 @@
 import { navigate } from '@reach/router';
-import { stringify } from 'ajv';
 import axios from 'axios';
 
 import React, { useContext, useEffect, useState } from 'react';
@@ -8,12 +7,10 @@ import AlreadyVotedView from '../components/AlreadyVotedView';
 import { UserContext } from '../UserContext';
 
 export default function VotingSite() {
-    const { user, setUser } = useContext(UserContext)
-    const [wellcome, setWellcome] = useState("Hej!")
+    const { user } = useContext(UserContext)
     const [medarbejdere, setMedarbejdere] = useState([])
     const [voterble, setVoterble] = useState([]);
     const [alreadyVoted, setAlreadyVoted] = useState(false)
-
 
     if(user === null) {
         navigate("/")
@@ -48,9 +45,9 @@ export default function VotingSite() {
         axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
         .then(response => response.data)
         .then((response) => {
-            const votedList = response.find(e => e.voter == user.id)
+            const votedList = response.find(e => e.voter === user.id)
 
-            if (votedList != undefined) {
+            if (votedList !== undefined) {
                 setAlreadyVoted(true);
             } else {
                 setAlreadyVoted(false); 
@@ -60,7 +57,7 @@ export default function VotingSite() {
 
         } )
          
-    }, [setAlreadyVoted])
+    }, [setAlreadyVoted, user])
      
 
     
@@ -79,11 +76,11 @@ export default function VotingSite() {
         const vote = e.target.vote.value;
         const message = e.target.message.value;
         const voter = JSON.stringify(user.id);
-        
         const voteData = {}
         voteData.vote = vote;
         voteData.voter = voter;
         voteData.message = message;
+        
 
          axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, null)
  
@@ -99,7 +96,7 @@ export default function VotingSite() {
 
 <>
             
-            <h1>{wellcome} {firstName}</h1>
+            <h1>Hej! {firstName}</h1>
 
       <form onSubmit={(e)=> vote(e)}>
 		<input list="vote-datalist" id="vote" name="vote" placeholder="Søg efter medarbejder" />

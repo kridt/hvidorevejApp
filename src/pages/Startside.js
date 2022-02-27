@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../UserContext';
 
 export default function Startside() {
-    const { user, setUser } = useContext(UserContext)
+    const { setUser } = useContext(UserContext)
     const [medarbejdere, setMedarbejdere] = useState({})
     const [votedlist, setVotedlist] = useState([])
 
@@ -36,7 +36,7 @@ export default function Startside() {
 
     function login() {
         const inputValue =document.getElementById("id");
-        if(inputValue.value.length != 6 ) {
+        if(inputValue.value.length !== 6 ) {
             alert("Du skal skrive dit lønnummer")
             return;
         } 
@@ -52,7 +52,7 @@ export default function Startside() {
        const userLogIn = document.getElementById('id').value;
        
 
-        if(userLogIn == parseInt(votedlist.map(e=>e))){
+        if(userLogIn === parseInt(votedlist.map(e=>e))){
             console.log("already Voted");
         } else{
             console.log("first time vote");

@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../UserContext'
 
 export default function AlreadyVotedView() {
-    const { user, setUser } = useContext(UserContext) 
+    const { user } = useContext(UserContext) 
     const [ votedFor, setVotedFor ] = useState({})
     
 
@@ -12,14 +12,14 @@ export default function AlreadyVotedView() {
 
         axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
         .then(response => {
-            const currentVote = response?.data.find(vote => vote.voter == user.id)
+            const currentVote = response?.data.find(vote => vote.voter === user.id)
 
             setVotedFor(currentVote)
 
         }) 
         
         
-    }, [setVotedFor])
+    }, [setVotedFor, user])
 
 
     function deleteMyVote(vote){
