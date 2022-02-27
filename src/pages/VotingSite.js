@@ -57,7 +57,7 @@ export default function VotingSite() {
 
         } )
          
-    }, [setAlreadyVoted, user.id])
+    }, [setAlreadyVoted, user])
      
 
     
