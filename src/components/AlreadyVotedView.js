@@ -29,8 +29,12 @@ export default function AlreadyVotedView() {
 
       navigate("/voteDeleted")
 
-    }
+    } 
 
+    function goBack(){
+      setUser(null)
+      
+    }
 
   return (
     <>
@@ -47,6 +51,13 @@ export default function AlreadyVotedView() {
       <br />
       <input type="submit" value="Slet"/>
     </form>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <button onClick={() => goBack()}>Tilbage</button>
+
     </>
   )
 }

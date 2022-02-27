@@ -52,10 +52,8 @@ export default function VotingSite() {
 
             if (votedList != undefined) {
                 setAlreadyVoted(true);
-                console.log("alreadyVoted");
             } else {
                 setAlreadyVoted(false); 
-                console.log("Newvie here");
             }  
 
  console.log(votedList);
@@ -87,22 +85,8 @@ export default function VotingSite() {
         voteData.voter = voter;
         voteData.message = message;
 
-        console.log(voteData);
-
-
-
-         axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, null).then(response => response)
-         .catch(function (error) {
-            // handle error
-            console.log(error);
-          })
-
-
-        /* axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes",{
-            ContentType: "application/json; charset=utf-8",
-            FormData: JSON.stringify(sendVote),
-        })  */
-
+         axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, null)
+ 
 
         navigate("/thanks")
     }
