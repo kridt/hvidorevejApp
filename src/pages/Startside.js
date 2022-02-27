@@ -6,6 +6,7 @@ import { UserContext } from '../UserContext';
 export default function Startside() {
     const { user, setUser } = useContext(UserContext)
     const [medarbejdere, setMedarbejdere] = useState({})
+    const [votedlist, setVotedlist] = useState([])
 
     useEffect(() => {
 
@@ -16,7 +17,19 @@ export default function Startside() {
 
     }, [setMedarbejdere])
     
-    
+    useEffect(() => {
+
+        axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
+        .then(response => response.data)
+        .then((response) => {
+            const votedList = response.map(e => e.voter)
+
+
+            setVotedlist(votedList)
+
+        } )
+         
+    }, [setVotedlist])
 
       
 
@@ -38,7 +51,13 @@ export default function Startside() {
 
        const userLogIn = document.getElementById('id').value;
        
-    
+
+        if(userLogIn == parseInt(votedlist.map(e=>e))){
+            console.log("already Voted");
+        } else{
+            console.log("first time vote");
+        }
+     
         medarbejdere?.filter(userid => userid.id === parseInt(userLogIn)).map(currentUser => setUser(currentUser)) 
         
         

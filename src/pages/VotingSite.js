@@ -1,7 +1,9 @@
 import { navigate } from '@reach/router';
+import { stringify } from 'ajv';
 import axios from 'axios';
 
 import React, { useContext, useEffect, useState } from 'react';
+import AlreadyVotedView from '../components/AlreadyVotedView';
 
 import { UserContext } from '../UserContext';
 
@@ -10,8 +12,8 @@ export default function VotingSite() {
     const [wellcome, setWellcome] = useState("Hej!")
     const [medarbejdere, setMedarbejdere] = useState([])
     const [voterble, setVoterble] = useState([]);
-    
-    const [alreadyVoted, setAlreadyVoted] = useState([])
+    const [alreadyVoted, setAlreadyVoted] = useState(false)
+
 
     if(user === null) {
         navigate("/")
@@ -48,18 +50,59 @@ export default function VotingSite() {
         .then((response) => {
             const votedList = response.map(e => e.voter)
 
-            console.log(votedList); 
+            if (user.id == parseInt(votedList)) {
+                setAlreadyVoted(true);
+                console.log("alreadyVoted");
+            } else {
+                setAlreadyVoted(false); 
+                console.log("Newvie here");
+            } 
 
-            setAlreadyVoted(response)
+ 
 
         } )
          
     }, [setAlreadyVoted])
      
+console.log(alreadyVoted);
+    
+    function deleteVote(voteId) {
+        voteId.preventDefault()
+
+        console.log(voteId.target.voteId.value);
+
+        axios.delete(`https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes/${voteId.target.voteId.value}`)
+
+    }
 
     
-    
     function vote(e) {
+        e.preventDefault()
+        const vote = e.target.vote.value;
+        const message = e.target.message.value;
+        const voter = JSON.stringify(user.id);
+        
+        const voteData = {}
+        voteData.vote = vote;
+        voteData.voter = voter;
+        voteData.message = message;
+
+        console.log(voteData);
+
+
+
+         axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, null).then(response => response)
+         .catch(function (error) {
+            // handle error
+            console.log(error);
+          })
+
+
+        /* axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes",{
+            ContentType: "application/json; charset=utf-8",
+            FormData: JSON.stringify(sendVote),
+        })  */
+
 
         navigate("/thanks")
     }
@@ -68,12 +111,15 @@ export default function VotingSite() {
     return (
         <>
 
-      <h1>{wellcome} {firstName}</h1>
+        {alreadyVoted ? ( <AlreadyVotedView /> ) : ( 
 
-      <form>
+<>
+            
+            <h1>{wellcome} {firstName}</h1>
+
+      <form onSubmit={(e)=> vote(e)}>
 		<input list="vote-datalist" id="vote" name="vote" placeholder="Søg efter medarbejder" />
-        <br />
-        <br />
+       
 
 		<datalist id="vote-datalist">
         
@@ -83,28 +129,34 @@ export default function VotingSite() {
                 const splitName = fullName.split(',')
                 const firstPartOfName = splitName[1];
                 const lastName = splitName[0];
-                const firstName = firstPartOfName.split(" ")[1];
-
+                
                 return(
-                    <option key={coworkers.id} value={firstPartOfName + " " + lastName}>{ " " }</option>
+                    <option key={coworkers.id} id={coworkers.id} value={firstPartOfName + " " + lastName}></option>
                 )
-
+                
             })} 
 			<option id="options" value=""></option> 
 		</datalist>
+        <br />
         <br />
 		<label htmlFor="message">Hvorfor skal han/hun vinde månedens medarbejder</label>
         <br />
         <br />
         <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <br />
+        <br />
 
-		<br />
-		<br />
-
-
-		<button onClick={()=>vote()}>Stem!</button>
+		<input type="submit" value="Stem!" />
 	</form>
       
+      <h1>Delete</h1>
+      <form onSubmit={(voteId) => deleteVote(voteId)}>
+        <input name="voteId" type="text" id="voteId"/>
+        <input type="submit" value="Slet" />
+      </form>
+
+</>
+)}
       </>
   )
 }
