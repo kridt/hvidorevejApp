@@ -19,7 +19,7 @@ export default function VotingSite() {
     }
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        window.scrollTo(0,42)
     })
 
     
