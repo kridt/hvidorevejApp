@@ -2,12 +2,10 @@ import { navigate } from '@reach/router';
 import axios from 'axios';
 
 import React, { useContext, useEffect, useState } from 'react';
-import AlreadyVotedView from '../components/AlreadyVotedView';
-import NotVotedYet from '../components/NotVotedYet';
 
 import { UserContext } from '../UserContext';
-
-export default function VotingSite() {
+export default function NotVotedYet() {
+  
     const { user } = useContext(UserContext)
     const [medarbejdere, setMedarbejdere] = useState([])
     const [voterble, setVoterble] = useState([]);
@@ -130,11 +128,60 @@ useEffect(() => {
             })
         })
     }
-
+  
+  
     return (
         <>
+            
+        <h1>Hej! {firstName}</h1>
 
-        {alreadyVoted ? ( <AlreadyVotedView /> ) : ( <NotVotedYet /> )}
-      </>
+  <form onSubmit={(e)=> vote(e)}>
+    <input list="vote-datalist" id="vote" name="vote" placeholder="Søg efter medarbejder" />
+   
+
+    <datalist id="vote-datalist">
+    
+    
+        {voterble?.map((coworkers)=>{
+            const fullName = coworkers?.name;
+            const splitName = fullName.split(',')
+            const firstPartOfName = splitName[1];
+            const lastName = splitName[0];
+            
+            return(
+                <option key={coworkers.id} id={coworkers.id} value={firstPartOfName + " " + lastName}></option>
+            )
+            
+        })} 
+        <option id="options" value=""></option> 
+    </datalist>
+    <br />
+    <br />
+    <label htmlFor="message">Hvorfor skal han/hun vinde månedens medarbejder</label>
+    <br />
+    <br />
+    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    <br />
+    <br />
+
+    <input type="submit" value="Stem!" />
+</form>
+  
+  {/* <h1>Delete</h1>
+  <form onSubmit={(voteId) => deleteVote(voteId)}>
+    <input name="voteId" type="text" id="voteId"/>
+    <input type="submit" value="Slet" />
+  </form> */}
+
+
+{alfa ? (
+    <>
+        <button onClick={(e) => deleteEverything(e)}>Fjern alle stemmer</button>
+    </>
+) : ( 
+    <h1>beta</h1>
+ ) }      
+
+</>
   )
 }
