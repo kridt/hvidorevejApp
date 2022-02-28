@@ -55,7 +55,7 @@ useEffect(() => {
         axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
         .then(response => response.data)
         .then((response) => {
-            const votedList = response.find(e => e.voter === user.id)
+            const votedList = response.find(e => e.voter = user.id)
 
             if (votedList !== undefined) {
                 setAlreadyVoted(true);
