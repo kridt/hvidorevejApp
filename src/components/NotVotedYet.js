@@ -48,7 +48,7 @@ useEffect(() => {
     
     
     
-    useEffect(() => {
+    /* useEffect(() => {
 
         axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
         .then(response => response.data)
@@ -67,7 +67,7 @@ useEffect(() => {
 
         } )
          
-    }, [setAlreadyVoted, user])
+    }, [setAlreadyVoted, user]) */
      
 
     
