@@ -117,7 +117,7 @@ useEffect(() => {
                 
                 axios.delete(`https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes/${votes._id}`)
 
-                return;
+                return null;
 
             })
         })
