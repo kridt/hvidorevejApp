@@ -97,7 +97,14 @@ useEffect(() => {
 
         console.log(voteData);
 
-         axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, null)
+        axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, {
+            headers: { "Content-Type": "application/json" }
+        })
+
+        
+
+
+         /* axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, null) */
  
           /* fetch("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", {
              method: "POST",
