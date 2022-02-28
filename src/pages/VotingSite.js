@@ -98,7 +98,11 @@ useEffect(() => {
         console.log(voteData);
 
         axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, {
-            headers: { "Content-Type": "application/json" }
+            headers: { 
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": true,
+                "Access-Control-Allow-Origin": "*",
+            }
         })
 
         
