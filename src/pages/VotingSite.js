@@ -57,6 +57,8 @@ useEffect(() => {
         .then((response) => {
             const votedList = response.find(e => e.voter = user.id)
 
+            console.log(votedList);
+
             if (votedList !== undefined) {
                 setAlreadyVoted(true);
             } else {

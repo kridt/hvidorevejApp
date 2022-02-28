@@ -12,7 +12,9 @@ export default function AlreadyVotedView() {
 
         axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
         .then(response => {
-            const currentVote = response?.data.find(vote => vote.voter === user.id)
+            const currentVote = response?.data.find(vote => vote.voter = user.id)
+
+            console.log(currentVote);
 
             setVotedFor(currentVote)
 
