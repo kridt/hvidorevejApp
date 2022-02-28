@@ -18,6 +18,9 @@ export default function VotingSite() {
         location.reload();
     }
 
+    useEffect(() => {
+        document.body.style.zoom = "90%"
+    })
 
     
     useEffect(()=> {

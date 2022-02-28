@@ -93,7 +93,6 @@ useEffect(() => {
         voteData.voter = voter;
         voteData.message = message;
 
-        console.log(voteData);
 
         axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, null)
 
