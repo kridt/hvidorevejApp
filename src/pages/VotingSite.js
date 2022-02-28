@@ -16,12 +16,15 @@ export default function VotingSite() {
         navigate("/")
         // eslint-disable-next-line
         location.reload();
-    }
-
-    useEffect(() => {
+    } else{        
         document.body.style.zoom = "50%";
         window.scrollTo(60, 0);
-    })
+    }
+
+   
+        document.body.style.zoom = "50%";
+        window.scrollTo(60, 0);
+
 
     
     useEffect(()=> {
