@@ -9,7 +9,6 @@ export default function NotVotedYet() {
     const { user } = useContext(UserContext)
     const [medarbejdere, setMedarbejdere] = useState([])
     const [voterble, setVoterble] = useState([]);
-    const [alreadyVoted, setAlreadyVoted] = useState(false);
     const [alfa, setAlfa] = useState(false)
 
     if(user === null) {
@@ -133,7 +132,7 @@ useEffect(() => {
     return (
         <>
             
-        <h1>Hej! {firstName}</h1>
+        <h1>Hej! { firstName }</h1>
 
   <form onSubmit={(e)=> vote(e)}>
     <input list="vote-datalist" id="vote" name="vote" placeholder="Søg efter medarbejder" />
@@ -142,7 +141,7 @@ useEffect(() => {
     <datalist id="vote-datalist">
     
     
-        {voterble?.map((coworkers)=>{
+        {voterble.map((coworkers)=>{
             const fullName = coworkers?.name;
             const splitName = fullName.split(',')
             const firstPartOfName = splitName[1];
