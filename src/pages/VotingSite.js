@@ -88,7 +88,7 @@ useEffect(() => {
         const voter = JSON.stringify(user.id);
         
         
-        const voteData = new FormData()
+        const voteData = {}
         voteData.vote = vote;
         voteData.voter = voter;
         voteData.message = message;
