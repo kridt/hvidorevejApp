@@ -10,13 +10,23 @@ export default function VotingSite() {
     const { user } = useContext(UserContext)
     const [medarbejdere, setMedarbejdere] = useState([])
     const [voterble, setVoterble] = useState([]);
-    const [alreadyVoted, setAlreadyVoted] = useState(false)
+    const [alreadyVoted, setAlreadyVoted] = useState(false);
+    const [alfa, setAlfa] = useState(false)
 
     if(user === null) {
         navigate("/")
         // eslint-disable-next-line
         location.reload();
     }
+useEffect(() => {
+
+    if(user.id === 286828){
+        setAlfa(true)
+    } else {
+        setAlfa(false)
+    }
+}, [user])
+
 
     const fullName = user?.name;
     const splitName = fullName.split(',')
@@ -53,7 +63,7 @@ export default function VotingSite() {
                 setAlreadyVoted(false); 
             }  
 
- console.log(user);
+ 
 
         } )
          
@@ -76,19 +86,41 @@ export default function VotingSite() {
         const vote = e.target.vote.value;
         const message = e.target.message.value;
         const voter = JSON.stringify(user.id);
-        const voteData = {}
+        
+        
+        const voteData = new FormData()
         voteData.vote = vote;
         voteData.voter = voter;
         voteData.message = message;
-        
+
+        console.log(voteData);
 
          axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, null)
  
+          /* fetch("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", {
+             method: "POST",
+             body: voteData
+         }).then(response => console.log(response)) */
 
-        navigate("/thanks")
+        navigate("/thanks") 
     }
     
     /* console.log(user); */
+
+    function deleteEverything(e){
+        e.preventDefault();
+
+        axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
+        .then(response => response.data)
+        .then(data => {
+            data?.map((votes) =>{
+                
+                axios.delete(`https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes/${votes._id}`)
+
+            })
+        })
+    }
+
     return (
         <>
 
@@ -135,6 +167,15 @@ export default function VotingSite() {
         <input name="voteId" type="text" id="voteId"/>
         <input type="submit" value="Slet" />
       </form> */}
+
+
+    {alfa ? (
+        <>
+            <button onClick={(e) => deleteEverything(e)}>Fjern alle stemmer</button>
+        </>
+    ) : ( 
+        <h1>beta</h1>
+     ) }      
 
 </>
 )}
