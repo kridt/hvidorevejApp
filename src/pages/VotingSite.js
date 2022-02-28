@@ -19,8 +19,8 @@ export default function VotingSite() {
     }
 
     useEffect(() => {
-        document.body.style.zoom = "70%";
-        window.scrollTo(100, 0);
+        document.body.style.zoom = "50%";
+        window.scrollTo(60, 0);
     })
 
     
