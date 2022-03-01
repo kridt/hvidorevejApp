@@ -1,15 +1,15 @@
 import { navigate } from '@reach/router';
 import axios from 'axios';
-
+import { UserContext } from '../UserContext';
 import React, { useContext, useEffect, useState } from 'react';
 
-import { UserContext } from '../UserContext';
+
 export default function NotVotedYet() {
-  
     const { user } = useContext(UserContext)
     const [medarbejdere, setMedarbejdere] = useState([])
     const [voterble, setVoterble] = useState([]);
     const [alfa, setAlfa] = useState(false)
+  
 
     if(user === null) {
         navigate("/")
@@ -43,6 +43,29 @@ useEffect(() => {
         setVoterble(medarbejdere.filter((e)=> e.leader === false))
         
     }, [medarbejdere, setMedarbejdere]); 
+
+
+
+
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+        
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+            
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+        
+        return array;
+    }
+    shuffle(voterble)
     
     /* console.log(medarbejder); */
     
@@ -127,6 +150,10 @@ useEffect(() => {
         })
     }
   
+    function mailMessage(e){
+        e.preventDefault();
+        navigate("/winner")
+    }
   
     return (
         <>
@@ -147,7 +174,7 @@ useEffect(() => {
             const lastName = splitName[0];
             
             return(
-                <option key={coworkers.id} id={coworkers.id} value={firstPartOfName + " " + lastName}></option>
+                <option key={coworkers.id} id={coworkers.id} value={coworkers.afdeling + firstPartOfName + " " + lastName}></option>
             )
             
         })} 
@@ -175,6 +202,10 @@ useEffect(() => {
 {alfa ? (
     <>
         <button onClick={(e) => deleteEverything(e)}>Fjern alle stemmer</button>
+        <br />
+        <br />
+        <br />
+        <button onClick={(e) => mailMessage(e)}>Send mail med månedens medarbejder</button>
     </>
 ) : ( 
     <h1>beta</h1>

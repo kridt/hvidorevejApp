@@ -1,8 +1,15 @@
 import { navigate } from '@reach/router';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function Thanks() {
   
+    useEffect(() => {
+
+        document.body.style.zoom = "50%";
+            window.scrollTo(60, 0);
+    })
+
+
     setTimeout(() =>{
         navigate("/")
     }, 1500)

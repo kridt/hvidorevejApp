@@ -6,6 +6,7 @@ import Startside from './pages/Startside';
 import VotingSite from './pages/VotingSite';
 import Thanks from './pages/Thanks';
 import VoteDeleted from './pages/VoteDeleted';
+import Winner from './pages/Winner';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -19,7 +20,8 @@ function App() {
         <Startside path="/" />
         <VotingSite path="/votingsite" />
         <Thanks path="/thanks" />
-        <VoteDeleted path="/voteDeleted" />       
+        <VoteDeleted path="/voteDeleted" />
+        <Winner path="/winner" />       
       </Router>
     </UserContext.Provider>
   );
