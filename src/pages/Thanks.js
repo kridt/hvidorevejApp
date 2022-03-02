@@ -11,7 +11,7 @@ export default function Thanks() {
 
 
     setTimeout(() =>{
-        navigate("/")
+        document.location.reload() 
     }, 1500)
   
     return(
