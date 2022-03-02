@@ -3,6 +3,9 @@ import React, { useEffect } from 'react';
 
 export default function Thanks() {
   
+  
+  
+  
     useEffect(() => {
 
         document.body.style.zoom = "50%";
@@ -12,7 +15,11 @@ export default function Thanks() {
 
     setTimeout(() =>{
         document.location.reload() 
-      navigate("/")
+      if(user === null) {
+        navigate("/")
+        // eslint-disable-next-line
+        location.reload();
+    }
     }, 1500)
   
     return(
