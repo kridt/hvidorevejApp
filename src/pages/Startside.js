@@ -4,12 +4,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../UserContext';
 
 export default function Startside() {
-    const { user, setUser } = useContext(UserContext)
+    const { setUser } = useContext(UserContext)
     const [medarbejdere, setMedarbejdere] = useState({})
     const [votedlist, setVotedlist] = useState([])
 
 
-    console.log(votedlist);
 
     useEffect(() => {
 
@@ -44,30 +43,17 @@ export default function Startside() {
             alert("Du skal skrive dit lønnummer")
             return;
         } 
-        /* medarbejdere?.filter(user => console.log(user.id === 286828)) */
-        /* 
-        const findTheUser = 
-        console.log(findTheUser); */
-        /* if(findTheUser === undefined) {
-            alert("Du skal skrive dit lønnummer")
-            return;
-        } */
-
-       const userLogIn = document.getElementById('id').value;
        
 
-        if(userLogIn === parseInt(votedlist.map(e=>e))){
-            console.log("already Voted");
-        } else{
-            console.log("first time vote");
-        }
+       const userLogIn = document.getElementById('id').value;
+
      
         medarbejdere?.filter(userid => userid.id === parseInt(userLogIn)).map(currentUser => setUser(currentUser)) 
         
         
         navigate("/votingsite")
    }
-
+ 
   return(
   <>
 

@@ -21,7 +21,7 @@ export default function VotingSite() {
         window.scrollTo(60, 0);
     }
 
-   
+    
         document.body.style.zoom = "50%";
         window.scrollTo(60, 0);
 
@@ -42,20 +42,37 @@ export default function VotingSite() {
         axios.get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
         .then(response => response.data)
         .then((data) => {
-            console.log(data);
 
             const voteList = data.map(users => users.voter)
-            console.log(user.id);
-
+            var test = []
+              
+            voteList.forEach(user => {
+                test.push(parseInt(user))
+            })
             
 
-            if (user.id === voteList) {
-                console.log("user not voted yet");
+            test.forEach(vote => {
+                if (vote === user.id) {
+                    console.log("bad");
+                    setAlreadyVoted(true)
+                    return;
+                } 
+            }) 
+ 
+            /*i f(test === user.id) {  
+                console.log("Good");
             } else{
-                console.log("User has voted");
-            }
+                console.log("Bad");
+            } */
 
-            console.log(voteList);
+           /*  if (user.id === parseInt(voteList)) {
+                console.log("User has voted");
+                setAlreadyVoted(true)
+            } else{
+                console.log("user not voted yet");
+                setAlreadyVoted(false)
+            } */
+ 
 
             /* const votedList = data.map(e => e.voter === user.id) 
             
