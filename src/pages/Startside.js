@@ -4,9 +4,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../UserContext';
 
 export default function Startside() {
-    const { setUser } = useContext(UserContext)
+    const { user, setUser } = useContext(UserContext)
     const [medarbejdere, setMedarbejdere] = useState({})
     const [votedlist, setVotedlist] = useState([])
+
+
+    console.log(votedlist);
 
     useEffect(() => {
 
@@ -14,6 +17,7 @@ export default function Startside() {
         .then(response => response.data)
         .then((response) => setMedarbejdere(response))
 
+        setUser(null)
 
     }, [setMedarbejdere])
     
