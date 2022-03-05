@@ -1,6 +1,6 @@
 import { navigate } from '@reach/router';
 import axios from 'axios';
-
+import dateFormat, { masks } from "dateformat";
 import React, { useContext, useEffect, useState } from 'react';
 import AlreadyVotedView from '../components/AlreadyVotedView';
 import NotVotedYet from '../components/NotVotedYet';
@@ -9,9 +9,9 @@ import { UserContext } from '../UserContext';
 
 export default function VotingSite() {
     const { user } = useContext(UserContext)
-    const [medarbejdere, setMedarbejdere] = useState([])
+    const [ setMedarbejdere] = useState([])
     const [alreadyVoted, setAlreadyVoted] = useState(false);
-
+    const time = new Date();
     if(user === null) {
         navigate("/")
         // eslint-disable-next-line
@@ -25,17 +25,21 @@ export default function VotingSite() {
         document.body.style.zoom = "50%";
         window.scrollTo(60, 0);
 
+    
+    
+    useEffect(() => {
+        const postThingy = `${JSON.stringify(user)} at ${dateFormat(time, "dddd, d mmmm, h:MM:ss TT")}`
 
-    
-    useEffect(()=> {
+        const logData = {}
+        logData.visit = postThingy
+
+        console.log(logData);
         
-        axios.get('/medarbejdere.json')
-        .then(response => setMedarbejdere(response.data))
-    }, [])
-    
-    
-    
-    
+        axios.post(`https://foetex-hvidorevej-votes.herokuapp.com/api/v1/visits`, logData)
+        .then(response => console.log(response))
+
+    })
+     
     
     useEffect(() => {
 

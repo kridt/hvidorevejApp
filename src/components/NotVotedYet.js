@@ -118,16 +118,8 @@ useEffect(() => {
 
 
         axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, null)
-
         
 
-
-         /* axios.post("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", voteData, null) */
- 
-          /* fetch("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes", {
-             method: "POST",
-             body: voteData
-         }).then(response => console.log(response)) */
 
         navigate("/thanks") 
     }
@@ -205,10 +197,10 @@ useEffect(() => {
         <br />
         <br />
         <br />
-        <button onClick={(e) => mailMessage(e)}>Send mail med månedens medarbejder</button>
+        {/* <button onClick={(e) => mailMessage(e)}>Send mail med månedens medarbejder</button> */}
     </>
 ) : ( 
-    <h1>beta</h1>
+    <h1></h1>
  ) }      
 
 </>
