@@ -1,6 +1,6 @@
 import { navigate } from '@reach/router';
 import axios from 'axios';
-import dateFormat, { masks } from "dateformat";
+import dateFormat from "dateformat";
 import React, { useContext, useEffect, useState } from 'react';
 import AlreadyVotedView from '../components/AlreadyVotedView';
 import NotVotedYet from '../components/NotVotedYet';
@@ -9,8 +9,9 @@ import { UserContext } from '../UserContext';
 
 export default function VotingSite() {
     const { user } = useContext(UserContext)
-    const [ setMedarbejdere] = useState([])
     const [alreadyVoted, setAlreadyVoted] = useState(false);
+
+
     const time = new Date();
     if(user === null) {
         navigate("/")
@@ -28,7 +29,7 @@ export default function VotingSite() {
     
     
     useEffect(() => {
-        const postThingy = `${JSON.stringify(user)} at ${dateFormat(time, "dddd, d mmmm, h:MM:ss TT")}`
+        const postThingy = `${JSON.stringify(user)} at ${dateFormat(time, "dddd, d mmmm, h:MM:ss TT")} on a ${navigator.userAgent}`
 
         const logData = {}
         logData.visit = postThingy
