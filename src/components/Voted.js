@@ -9,7 +9,7 @@ export default function Voted({ vote }) {
     } else {
       setVoteMessage(vote.message);
     }
-  });
+  }, [setVoteMessage]);
 
   return (
     <div className="vote" key={vote.voter}>
