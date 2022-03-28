@@ -2,7 +2,6 @@ import { navigate } from "@reach/router";
 import axios from "axios";
 import { UserContext } from "../UserContext";
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "@reach/router";
 
 export default function NotVotedYet() {
   const { user } = useContext(UserContext);
