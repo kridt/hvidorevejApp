@@ -7,20 +7,12 @@ export default function NotVotedYet() {
   const { user } = useContext(UserContext);
   const [medarbejdere, setMedarbejdere] = useState([]);
   const [voterble, setVoterble] = useState([]);
-  const [alfa, setAlfa] = useState(false);
 
   if (user === null) {
     navigate("/");
     // eslint-disable-next-line
     location.reload();
   }
-  useEffect(() => {
-    if (user.id === 286828 || 125811) {
-      setAlfa(true);
-    } else {
-      setAlfa(false);
-    }
-  }, [user]);
 
   const fullName = user?.name;
   const splitName = fullName.split(",");
