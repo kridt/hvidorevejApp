@@ -19,7 +19,6 @@ function App() {
         <VotingSite path="/votingsite" />
         <Thanks path="/thanks" />
         <VoteDeleted path="/voteDeleted" />
-        <Winner path="/winner" />
         <Resultat path="/resultat" />
       </Router>
     </UserContext.Provider>

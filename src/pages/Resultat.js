@@ -12,9 +12,13 @@ export default function Resultat() {
       .then((response) => setVoteList(response.data));
   }, [setVoteList]);
 
+  function tilbage() {
+    navigate("/votingsite");
+  }
+
   return (
     <>
-      <button onClick={navigate("/votingsite")}>Tilbage</button>
+      <button onClick={() => tilbage()}>Tilbage</button>
       <h1>Alle Stemmer</h1>
       <h2>Antal stemmer: {voteList.length}</h2>
       <div>
