@@ -2,6 +2,7 @@ import { navigate } from "@reach/router";
 import axios from "axios";
 import { UserContext } from "../UserContext";
 import React, { useContext, useEffect, useState } from "react";
+import { Link } from "@reach/router";
 
 export default function NotVotedYet() {
   const { user } = useContext(UserContext);
@@ -189,6 +190,7 @@ export default function NotVotedYet() {
             Fjern alle stemmer
           </button>
           <br />
+          <Link to="/resultat">Se alle stemmer</Link>
           <br />
           <br />
           {/* <button onClick={(e) => mailMessage(e)}>Send mail med månedens medarbejder</button> */}
