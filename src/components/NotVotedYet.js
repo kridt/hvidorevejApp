@@ -16,7 +16,7 @@ export default function NotVotedYet() {
     location.reload();
   }
   useEffect(() => {
-    if (user.id === 286828) {
+    if (user.id === 286828 || 125811) {
       setAlfa(true);
     } else {
       setAlfa(false);
