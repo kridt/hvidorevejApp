@@ -6,7 +6,6 @@ import Startside from "./pages/Startside";
 import VotingSite from "./pages/VotingSite";
 import Thanks from "./pages/Thanks";
 import VoteDeleted from "./pages/VoteDeleted";
-import Winner from "./pages/Winner";
 import Resultat from "./pages/Resultat";
 
 function App() {
