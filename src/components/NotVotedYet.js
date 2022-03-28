@@ -115,19 +115,26 @@ export default function NotVotedYet() {
 
   function deleteEverything(e) {
     e.preventDefault();
+    if (window.confirm("Er du sikker på at du vil slette alle stemmer?")) {
+      axios
+        .get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
+        .then((response) => response.data)
+        .then((data) => {
+          data?.map((votes) => {
+            axios.delete(
+              `https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes/${votes._id}`
+            );
 
-    axios
-      .get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
-      .then((response) => response.data)
-      .then((data) => {
-        data?.map((votes) => {
-          axios.delete(
-            `https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes/${votes._id}`
-          );
-
-          return null;
+            return null;
+          });
         });
-      });
+      console.log("alle stemmer er slettet");
+    } else {
+      console.log("alle stemmer er ikke slettet");
+      return;
+    }
+    /*
+     */
   }
 
   /* function mailMessage(e){
@@ -186,11 +193,16 @@ export default function NotVotedYet() {
 
       {alfa ? (
         <>
+          <br />
+          <br />
+
           <button onClick={(e) => deleteEverything(e)}>
             Fjern alle stemmer
           </button>
           <br />
-          <Link to="/resultat">Se alle stemmer</Link>
+          <br />
+          <br />
+          <button>Se alle stemmer</button>
           <br />
           <br />
           {/* <button onClick={(e) => mailMessage(e)}>Send mail med månedens medarbejder</button> */}

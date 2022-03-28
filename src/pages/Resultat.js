@@ -1,3 +1,4 @@
+import { navigate } from "@reach/router";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Voted from "../components/Voted";
@@ -13,6 +14,7 @@ export default function Resultat() {
 
   return (
     <>
+      <button onClick={navigate("/votingsite")}>Tilbage</button>
       <h1>Alle Stemmer</h1>
       <h2>Antal stemmer: {voteList.length}</h2>
       <div>
