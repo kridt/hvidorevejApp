@@ -5,10 +5,8 @@ import { UserContext } from "../UserContext";
 
 export default function Startside() {
   const { setUser } = useContext(UserContext);
-  const [medarbejdere, setMedarbejdere] = useState([]);
+  const [medarbejdere, setMedarbejdere] = useState({});
   const [votedlist, setVotedlist] = useState([]);
-
-  console.log(votedlist);
 
   useEffect(() => {
     axios
@@ -17,7 +15,7 @@ export default function Startside() {
       .then((response) => setMedarbejdere(response));
 
     setUser(null);
-  }, [setMedarbejdere, setUser]);
+  }, [setMedarbejdere]);
 
   useEffect(() => {
     axios
@@ -30,14 +28,30 @@ export default function Startside() {
       });
   }, [setVotedlist]);
 
+  console.log(navigator.userAgent);
+
   function login() {
     const inputValue = document.getElementById("id");
     if (inputValue.value.length !== 6) {
       alert("Du skal skrive dit lønnummer");
       return;
     }
+    /* medarbejdere?.filter(user => console.log(user.id === 286828)) */
+    /* 
+        const findTheUser = 
+        console.log(findTheUser); */
+    /* if(findTheUser === undefined) {
+            alert("Du skal skrive dit lønnummer")
+            return;
+        } */
 
     const userLogIn = document.getElementById("id").value;
+
+    if (userLogIn === parseInt(votedlist.map((e) => e))) {
+      console.log("already Voted");
+    } else {
+      console.log("first time vote");
+    }
 
     medarbejdere
       ?.filter((userid) => userid.id === parseInt(userLogIn))
@@ -56,11 +70,14 @@ export default function Startside() {
       <div>
         <h1>Skriv dit lønnummer</h1>
         <br />
-        <input type="number" id="id" name="id" />
-        <br />
-        <br />
-        <br />
-        <button onClick={() => login()}>Log ind</button>
+
+        <form onSubmit={(e) => e.preventDefault()}>
+          <input type="number" id="id" name="id" />
+          <br />
+          <br />
+          <br />
+          <button onClick={() => login()}>Log ind</button>
+        </form>
       </div>
     </>
   );

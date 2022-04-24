@@ -11,9 +11,20 @@ export default function VotingSite() {
   const { user } = useContext(UserContext);
   const [alreadyVoted, setAlreadyVoted] = useState(false);
   const [alfa, setAlfa] = useState(false);
+  const [allVisits, setAllVisits] = useState([]);
+  const [visits, setVisits] = useState(false);
+
+  useEffect(() => {
+    axios
+      .get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/visits")
+      .then((response) => console.log(response.data));
+  }, [setAllVisits]);
+
+  console.log(allVisits);
 
   useEffect(() => {
     if (user.id === 286828) {
+      setVisits(true);
       setAlfa(true);
     } else {
       if (user.id === 125811) {
