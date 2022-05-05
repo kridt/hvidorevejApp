@@ -14,6 +14,8 @@ export default function VotingSite() {
   const [allVisits, setAllVisits] = useState([]);
   const [visits, setVisits] = useState(false);
 
+console.log(visits);
+
   useEffect(() => {
     axios
       .get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/visits")

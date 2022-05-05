@@ -15,7 +15,7 @@ export default function Startside() {
       .then((response) => setMedarbejdere(response));
 
     setUser(null);
-  }, [setMedarbejdere]);
+  }, [setMedarbejdere, setUser]);
 
   useEffect(() => {
     axios
