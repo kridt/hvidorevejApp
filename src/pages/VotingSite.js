@@ -185,7 +185,8 @@ useEffect(() => {
           <br />
           <br />
           <br />
-          <button onClick={(e) => testFunction(e)}>Se alle stemmer</button>
+
+          <button onClick={(e) => testFunction(e)}>Se vinderen</button>
         </>
       ) : null}
     </>

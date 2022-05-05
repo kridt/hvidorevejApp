@@ -16,7 +16,8 @@ export default function Resultat() {
     }
     return collection;
   }, {});
-  console.log(count);
+  
+  console.log(JSON.stringify(count));
   useEffect(() => {
     axios
       .get("https://foetex-hvidorevej-votes.herokuapp.com/api/v1/votes")
@@ -30,6 +31,15 @@ export default function Resultat() {
   return (
     <>
       <button onClick={() => tilbage()}>Tilbage</button>
+
+
+      <h1>Vinderen er:</h1>
+
+      {Object.keys(count).map((key) => {
+
+        return null
+      })}
+
       <h1>Alle Stemmer</h1>
       <h2>Antal stemmer: {voteList.length}</h2>
       <div>
